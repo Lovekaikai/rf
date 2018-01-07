@@ -3,7 +3,6 @@ var fs=require('fs');
 var rf=function(path,callback){
 
 fs.access(path, (err) => {
-  //console.log(err ? 'no access!' : 'can read/write');
    if(err){
      //throw err;
       callback(err);
@@ -14,7 +13,6 @@ fs.access(path, (err) => {
         callback(null,data)
     })
 });
-
 
 }
 module.exports=rf;
